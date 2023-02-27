@@ -9,7 +9,7 @@ class PhoneBookTest {
     @Test
     public void testCreateContact() {
         PhoneBook phoneBook = new PhoneBook();
-        phoneBook.addContact("Катя", "Петрова", "+79871723414");
+        phoneBook.addContact("Masha", "Petrova", "+79871723414");
         assertFalse(phoneBook.getAllContacts().isEmpty());
         assertEquals(1, phoneBook.getAllContacts().size());
     }
@@ -17,7 +17,7 @@ class PhoneBookTest {
     @Test
     public void testWhenFirstNameIsNull() {
         PhoneBook phoneBook = new PhoneBook();
-        Assertions.assertThrows(RuntimeException.class, () -> phoneBook.addContact(null, "Сидоров", "+79251726093"));
+        Assertions.assertThrows(RuntimeException.class, () -> phoneBook.addContact(null, "Sidorov", "+79251726093"));
     }
 
     //@Test
